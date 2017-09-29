@@ -76,7 +76,7 @@ load('./data/ChIPfiles.rda')
 	# simplifyGOterms(goterms=c('GO:0002320','GO:0002244'), maxOverlap= 0.4, ontology='BP')
 
 # - GR2fasta: a new GRanges method to extract and write to the disk a fasta file containing genomic seqs for the GRanges regions in a genome
-
+''' I have stopped here !!!!!! '''
 	setGeneric('GR2fasta', function(gr, bsgenome, fileout=NULL) standardGeneric('GR2fasta'))
 	setMethod('GR2fasta','GRanges', function(gr, bsgenome, fileout=NULL) {
 		if(class(bsgenome)!='BSgenome') stop('GR2fasta: org has to be of class BSgenome ...')
