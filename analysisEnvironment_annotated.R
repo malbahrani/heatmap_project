@@ -5,10 +5,10 @@ require(org.Hs.eg.db)
 require(BSgenome.Mmusculus.UCSC.mm9)
 
 ### Mustafa: loading data from local folder ###
-load('/Users/mustafa.albahrani/workspace/clustering_tool/saboEtAl2014_sourceCode/data/peaksRef.rda')
-load('/Users/mustafa.albahrani/workspace/clustering_tool/saboEtAl2014_sourceCode/data/mycSummitsRef.rda')
-load('/Users/mustafa.albahrani/workspace/clustering_tool/saboEtAl2014_sourceCode/data/CGIgr.rda')
-load('/Users/mustafa.albahrani/workspace/clustering_tool/saboEtAl2014_sourceCode/data/deseqRes.rda')
+load('./saboEtAl2014_sourceCode/data/peaksRef.rda')
+load('./saboEtAl2014_sourceCode/data/mycSummitsRef.rda')
+load('./saboEtAl2014_sourceCode/data/CGIgr.rda')
+load('./saboEtAl2014_sourceCode/data/deseqRes.rda')
 ### Mustafa: NOTE: I could not find a file in the signified folder with this name! [I might send the papers authors about this dataset] ###
 load('./data/ChIPfiles.rda')
 
