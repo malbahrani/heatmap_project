@@ -1,4 +1,5 @@
-source('analysisEnvironment.R')
+library(compEpiTools)
+source('./analysisEnvironment_annotated.R')
 
 # Myc promoter binding events in EuMyc
 	mycEuMycPromPeaks= peaksRefSimple$EuMyc[1:5]

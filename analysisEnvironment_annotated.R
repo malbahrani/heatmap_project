@@ -1,14 +1,16 @@
 ### Mustafa: import needed packages ###
 require(compEpiTools)
 require(TxDb.Hsapiens.UCSC.hg19.knownGene)
+require(TxDb.Mmusculus.UCSC.mm9.knownGene) # add this to the start of the analysisEnvironment_annotated.R 
 require(org.Hs.eg.db)
+require(org.Mm.eg.db)
 require(BSgenome.Mmusculus.UCSC.mm9)
 
 ### Mustafa: loading data from local folder ###
-load('./saboEtAl2014_sourceCode/data/peaksRef.rda')
-load('./saboEtAl2014_sourceCode/data/mycSummitsRef.rda')
-load('./saboEtAl2014_sourceCode/data/CGIgr.rda')
-load('./saboEtAl2014_sourceCode/data/deseqRes.rda')
+load('/Users/mustafa.albahrani/Downloads/saboEtAl2014_sourceCode/data/peaksRef.rda')
+load('/Users/mustafa.albahrani/Downloads/saboEtAl2014_sourceCode/data/mycSummitsRef.rda')
+load('/Users/mustafa.albahrani/Downloads/saboEtAl2014_sourceCode/data/CGIgr.rda')
+load('/Users/mustafa.albahrani/Downloads/saboEtAl2014_sourceCode/data/deseqRes.rda')
 ### Mustafa: NOTE: I could not find a file in the signified folder with this name! [I might send the papers authors about this dataset] ###
 load('./data/ChIPfiles.rda')
 
@@ -76,7 +78,6 @@ load('./data/ChIPfiles.rda')
 	# simplifyGOterms(goterms=c('GO:0002320','GO:0002244'), maxOverlap= 0.4, ontology='BP')
 
 # - GR2fasta: a new GRanges method to extract and write to the disk a fasta file containing genomic seqs for the GRanges regions in a genome
-''' I have stopped here !!!!!! '''
 	setGeneric('GR2fasta', function(gr, bsgenome, fileout=NULL) standardGeneric('GR2fasta'))
 	setMethod('GR2fasta','GRanges', function(gr, bsgenome, fileout=NULL) {
 		if(class(bsgenome)!='BSgenome') stop('GR2fasta: org has to be of class BSgenome ...')
